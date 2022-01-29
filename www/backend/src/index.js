@@ -22,7 +22,7 @@ app.use(logRoutes);//O Middleware vai interceptar qualquer rota da nossa app.
 				   //	app.get('/projects', logRoutes, (request, response) ==> { BLOCO DE CÓDIGO }):
 
 app.get('/projects', (request, response) => {
-	const {title} = request.query; //query params: parametro de requisição
+    const {title} = request.query; //query params: parametro de requisição
 	const results = title
 		? projects.filter(project => project.title.includes(title))
 		: projects;
