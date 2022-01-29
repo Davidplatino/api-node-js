@@ -8,7 +8,7 @@ const projects = [];
 // Middleware: intercepta a requisição, executar algo e depois retoma o processamento 
 function logRoutes(request, response, next){
 	const {method, url} = request;
-	const route = '[${method.toUperCase()}] ${url}'; //Formatar o que foi enviado, assim: '[GET] https://localhost:3333'
+	const route = `[${method.toUpperCase()}] ${url}`; //Formatar o que foi enviado, assim: '[GET] https://localhost:3333'
 	
 	console.log(route);
 	
@@ -60,7 +60,7 @@ app.put('/projects/:id', (request, response) => {
 		owner
 	};
 	
-	projects[orojectIndex] = project;
+	projects[projectIndex] = project;
 	
 	return response.json(project);
 });
