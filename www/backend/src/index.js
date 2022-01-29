@@ -27,7 +27,7 @@ app.get('/projects', (request, response) => {
 		? projects.filter(project => project.title.includes(title))
 		: projects;
 	
-	return response.json(results); //Lista todos os projetos
+	return response.json(results); //Lista todos os projetos*/
 });
 
 app.post('/projects', (request, response) => {
